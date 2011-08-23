@@ -17,21 +17,7 @@ $app->register(new Silex\Extension\TwigExtension(), array(
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-$app->register(new Silex\Extension\TranslationExtension(), array(
-    'locale_fallback'           => 'en',
-    'translation.class_path'    => __DIR__.'/vendor/symfony/src',
-));
-
-$app['translator.messages'] = array(
-    'en' => __DIR__.'/locales/en.yml',
-    'tr' => __DIR__.'/locales/en.yml'
-);
-
-$app->before(function () use ($app) {
-    if ($locale = $app['request']->get('locale')) {
-        $app['locale'] = $locale;
-    }
-});
+include __DIR__.'/includes/locale.php';
 
 $app->get('/{locale}/{message}/{name}', function ($message, $name) use ($app) {
     return $app['translator']->trans($message, array('%name%' => $name));
