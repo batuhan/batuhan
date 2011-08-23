@@ -1,0 +1,15 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Owner: Firat Batuhan Icoz
+  Site: http://batu.me/1
+  Twitter: @batuhanicoz
+  Location: Bursa, Turkey
+
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, PHP
+  Software: Silex Framework (with Twig extension), Twitter Bootstrap

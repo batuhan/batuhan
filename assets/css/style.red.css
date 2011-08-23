@@ -1,0 +1,141 @@
+/*
+Author:			Gabre Cameron
+Author URI:		http://www.pxjunkie.blogspot.com
+Author E-mail:	gabrecameron@gmail.com
+*/
+
+
+/* === Default HTML === */
+body
+{
+	background: #fff;
+	color: #828a8f;
+	font-family: "Myriad Pro", Arial;
+	font-size: 12px;
+	text-align: center; /* for IE */
+}
+a
+{
+	color: #ff0000;
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+h1
+{
+	color: #000;
+	font-size: 30px;
+	font-weight: bold;
+}
+h2
+{
+	color: #5e6a72;
+	font-size: 15px;
+	font-weight: bold;
+}
+h3
+{
+	color: #5f6a72;
+	font-size: 13px;
+	font-weight: bold;
+}
+p
+{
+	margin: 0 0 15px 0;
+}
+
+
+
+/* === Container === */
+#Container
+{
+	width: 827px;
+	margin: 5% auto 0 auto;
+	text-align: left;
+}
+.clearfix
+{
+	clear: both;
+	display: block;
+}
+.divider
+{
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 20px;
+}
+.spacer
+{
+	padding-top: 20px;
+}
+
+/* === Left === */
+.lft
+{
+	float: left;
+	margin-top: 5%;
+	text-align: right;
+	width: 275px;
+}
+.tagline
+{
+	color: #ff0000;
+	font-size: 13px;
+}
+.msg
+{
+	margin: 20px 0;
+}
+
+
+
+/* === Middle === */
+.mid
+{
+	/* background-image: url(../images/phone.png);
+	background-position: top left;
+	background-repeat: no-repeat; */
+	float: left;
+	height: 581px;
+	/* margin: -237px 0 0 20px;
+	width: 237px;*/
+	margin: 0 20px;
+}
+
+
+/* === Right === */
+.rgt
+{
+	float: left;
+	margin-top: 5%;
+	text-align: left;
+	width: 275px;
+}
+.rgt .icon
+{
+	float: left;
+	margin-right: 10px;
+}
+.rgt p
+{
+	float: left;
+	width: 233px;
+}
+
+/* contact */
+.contact span
+{
+	color: #ff0000;
+	font-weight: bold;
+}
+
+
+
+/* twitter */
+.twitter-follow-button
+{
+	display: block;
+	float: left;	
+	margin-top: 0px;
+}
