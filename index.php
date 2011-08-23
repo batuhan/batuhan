@@ -1,9 +1,9 @@
 <?php
 
-require_once 'includes/silex.phar';
-include_once 'includes/functions.php';
+require_once __DIR__.'/includes/silex.phar';
+include_once __DIR__.'/includes/functions.php';
 
-require_once 'includes/lib/Twig/Autoloader.php';
+require_once __DIR__.'/includes/lib/Twig/Autoloader.php';
 
 $app = new Silex\Application();
 $app['debug'] = true;
@@ -11,7 +11,7 @@ $app['debug'] = true;
 Twig_Autoloader::register();
 
 $app->register(new Silex\Extension\TwigExtension(), array(
-    'twig.path'       => 'views',
+    'twig.path'       => __DIR__.'/views',
 ));
 
 use Symfony\Component\HttpFoundation\Request;
@@ -24,9 +24,7 @@ $app->register(new Silex\Extension\TranslationExtension(), array(
 
 $app['translator.messages'] = array(
     'en' => __DIR__.'/locales/en.yml',
-    'tr' => __DIR__.'/locales/en.yml',
-    'fr' => __DIR__.'/locales/en.yml',
-
+    'tr' => __DIR__.'/locales/en.yml'
 );
 
 $app->before(function () use ($app) {
