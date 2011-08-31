@@ -13,3 +13,5 @@ nbproject/
 nbactions.xml
 
 */.DS_Store
+
+cache/*
