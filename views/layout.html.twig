@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Firat Batuhan Icoz</title>
+    <title>{% block title %}{% endblock %}Firat Batuhan Icoz</title>
     <meta name="description" content="a shortcut to everything Batuhan">
     <meta name="author" content="Batuhan Icoz">
 
@@ -58,6 +58,15 @@
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/application.js"></script>
     <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-    
+    <!-- age thingy idea is inspired from Dustin Curtis' website, code inspired from Ahmet Alp Balkan's -->
+    <script type="text/javascript"> 
+		function daysAlive(month, day, year){
+			var birthday = new Date( year, month, day);
+			var today = new Date();
+			between = (today-birthday);
+			days = addCommas(Math.floor((between/1000)/86400));
+			$('#days_alive, #about_days').html(days);
+		}
+	</script>
   </body>
 </html>
