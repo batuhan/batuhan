@@ -58,15 +58,5 @@
     <script src="assets/js/google-code-prettify/prettify.js"></script>
     <script src="assets/js/application.js"></script>
     <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
-    <!-- age thingy idea is inspired from Dustin Curtis' website, code inspired from Ahmet Alp Balkan's -->
-    <script type="text/javascript"> 
-		function daysAlive(month, day, year){
-			var birthday = new Date( year, month, day);
-			var today = new Date();
-			between = (today-birthday);
-			days = addCommas(Math.floor((between/1000)/86400));
-			$('#days_alive, #about_days').html(days);
-		}
-	</script>
   </body>
 </html>

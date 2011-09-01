@@ -4,6 +4,7 @@ require_once __DIR__.'/../vendor/silex.phar';
 
 use Silex\Application;
 use Silex\Extension\TwigExtension;
+use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
 
