@@ -1,6 +1,6 @@
 <?php
 
-$app->get('/', function() use ($app) {
+$app->get('/{locale}', function() use ($app) {
 
 	$birthday = mktime(12,0,0,6,21,1995); // this should be a global variable
 	$offset = mktime() - $birthday;
@@ -13,7 +13,7 @@ $app->get('/', function() use ($app) {
   return $app['twig']->render('homepage.html.twig', $data);
 });
 
-$app->get('/contact', function() use ($app) {
+$app->get('/{locale}/contact', function() use ($app) {
   
   return $app['twig']->render('contact.html.twig');
   

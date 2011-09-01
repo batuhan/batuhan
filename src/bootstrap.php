@@ -8,10 +8,9 @@ use Symfony\Component\HttpFoundation\Response;
 
 $app = new Application();
 
-// Register Dailex classes for autoloading
-$app['autoloader']->registerNamespaces(array(
-  //'BiCom' => __DIR__,
-));
+$app['autoloader']->registerNamespace('Symfony', __DIR__.'/../vendor/symfony/src');
+
+$app['debug'] = TRUE;
 
 // Register Silex Extensions
 $app->register(new TwigExtension(), array(
@@ -23,4 +22,25 @@ $app->register(new TwigExtension(), array(
   ),
 ));
 
+$app->register(new Silex\Extension\TranslationExtension(), array( 
+    'translation.class_path' =>  __DIR__.'/../vendor/Symfony/src', 
+    'locale_fallback' => 'en', 
+)); 
+
+$app['translator.messages'] = array( 
+    'en' =>  __DIR__.'/../locales/en.yml', 
+    'tr' =>  __DIR__.'/../locales/tr.yml', 
+); 
+
+$app['translator.loader'] = new Symfony\Component\Translation\Loader\YamlFileLoader(); 
+
+$app->before(function () use ($app) {
+    if ($locale = $app['request']->get('locale')) {
+        $app['locale'] = $locale;
+    }
+});
+
+$app->get('/{locale}/{message}/{name}', function ($message, $name) use ($app) {
+    return $app['translator']->trans($message, array('%name%' => $name));
+});
 return $app;
