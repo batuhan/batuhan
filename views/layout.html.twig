@@ -46,19 +46,23 @@
       </div>
     </div>
 	<div class="topbar_break"></div>
-
+	
+	{% if app.bi_browser_lang == "tr-TR" %}
+	{% if app.bi_domain == "batuhanicoz.com" %}
 	<div class="container">
 		<section id="language_alert">
 	      <div class="alert-message block-message info">
 	        <a class="close" href="#">&times;</a>
 	        <p>{{ app.translator.trans('langwarning_text') }}</p>
 	        <div class="alert-actions">
-	          <a class="btn small" href="http://batuhanicoz.com{% if app.bi_browser_lang == "tr-TR" %}{% if app.bi_domain == "batuhanicoz.com" %}.tr{% endif %}{% endif %}/">{{ app.translator.trans('langwarning_button') }}</a> <a class="btn small" href="#">{{ app.translator.trans('langwarning_ignore') }}</a>
+	          <a class="btn small" href="http://batuhanicoz.com.tr/">{{ app.translator.trans('langwarning_button') }}</a> <a class="btn small" href="#">{{ app.translator.trans('langwarning_ignore') }}</a>
 	        </div>
 	      </div>
 		</section>
     </div>
-
+	{% endif %}
+	{% endif %}
+	
       {% block content %}{% endblock %}
       
     <div class="container">
