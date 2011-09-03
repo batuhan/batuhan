@@ -2,7 +2,7 @@
 
 $app->get('/', function() use ($app) {
 
-	$birthday = new DateTime('1995-06-21 14:35'); //@TODO: make this a global variable
+	$birthday = new DateTime('1995-06-21T12:35:00+00:00'); //@TODO: make this a global variable
 	$today = new DateTime();
 	$beenalivefor = $birthday->diff($today);
 
