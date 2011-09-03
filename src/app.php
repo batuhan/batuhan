@@ -2,9 +2,11 @@
 
 $app->get('/', function() use ($app) {
 
-	$birthday = mktime(12,0,0,6,21,1995); // this should be a global variable
-	$offset = mktime() - $birthday;
- 	$data['beenalivefor'] = floor($offset/60/60/24);
+	$birthday = new DateTime('1995-06-21'); //@TODO: make this a global variable
+	$today = new DateTime();
+	$interval = $birthday->diff($today);
+
+ 	$data['beenalivefor'] = $interval->y . " years, " . $interval->m." months and ".$interval->d." days"; 
  	
  	$hellotexts = array('Hi there', 'Hello', 'Hi', 'Merhaba', 'Hey');
 	$hellotext = array_rand($hellotexts);
