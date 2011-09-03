@@ -23,26 +23,34 @@
   </head>
 
   <body>
+      <li class="active"><a href="http://{{ domain }}/">Homepage</a></li>
+      <li><a href="http://{{ domain }}/about">About</a></li>
+      <li><a href="http://changelog.batu.me">Changelog</a></li>
+      <li><a href="http://blog.batu.me">Blog</a></li>
+      <li><a href="http://batu.me/projects">Projects</a></li>
+      <li><a href="http://shareables.me">Shareables</a></li>
+      <li><a href="http://{{ domain }}/contact">Contact</a></li>
+
 
     <!-- Topbar
     ================================================== -->
     <div class="topbar">
-      <div class="fill">
+      <div class="topbar-inner">
         <div class="container">
-          <h3><a href="http://batu.me/1">Batuhan's</a></h3>
-          <ul>
-            <li class="active"><a href="http://{{ domain }}/">Homepage</a></li>
-            <li><a href="http://{{ domain }}/about">About</a></li>
-            <li><a href="http://changelog.batu.me">Changelog</a></li>
-            <li><a href="http://blog.batu.me">Blog</a></li>
-            <li><a href="http://batu.me/projects">Projects</a></li>
-            <li><a href="http://shareables.me">Shareables</a></li>
-            <li><a href="http://{{ domain }}/contact">Contact</a></li>
+          <h3><a href="#">Batuhan's </a></h3>
+          <ul class="nav">
+	      	<li class="active"><a href="http://{{ domain }}/">Homepage</a></li>
+	      	<li><a href="http://{{ domain }}/about">About</a></li>
+	      	<li><a href="http://changelog.batu.me">Changelog</a></li>
+	      	<li><a href="http://blog.batu.me">Blog</a></li>
+	      	<li><a href="http://batu.me/projects">Projects</a></li>
+	      	<li><a href="http://shareables.me">Shareables</a></li>
+	      	<li><a href="http://{{ domain }}/contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </div>
-    
+
       {% block content %}{% endblock %}
       
     <div class="container">
