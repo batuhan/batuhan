@@ -14,7 +14,12 @@ $app->get('/', function() use ($app) {
   return $app['twig']->render('homepage.html.twig', $data);
 });
 
-$app->get('/contact', function() use ($app) {
+$contact_route = array(
+	'contact',
+	'iletisim'
+);
+
+$app->get($contact_route, function() use ($app) {
   
   return $app['twig']->render('contact.html.twig');
   
