@@ -12,7 +12,7 @@ desc: A place you can find everthing about Fırat Batuhan İçöz and his work.
 homepage_top_hello: "Hello, I'm Batuhan İçöz."
 homepage_tagline: "I'm a web developer, an amateur entrepreneur and a student."
 homepage_twitter_follow: Follow
-homepage_currently: >
+homepage_currently: |
     I'm currently 17-year-old and doing <a href="#">some awesome stuff</a>:
 about_title: Everything About 
 
@@ -25,14 +25,14 @@ contact_text: >
 contact_emails_title: e-mail(s)
 contact_emails_small: |
     are the <i>fastest</i> way.
-contact_emails_text: >
+contact_emails_text: |
     My primary e-mail address is i@batu.me but sometimes e-mail clients are finding it short and may think it's not real, if that happens, you can use batuhanicoz@gmail.com, which is slower, but works.
     Also, if you're comfortable with Facebook Messages, you can always use batuhanicoz@facebook.com but if your e-mail ends up in Other section, sorry, I'm checking it once 1 week.
 contact_phones_title: phone(s)
 contact_phones_small: my <i>favorite</i> way.
-contact_text: >
+contact_text: |
     My primary cell phone number is +90 (538) 878 10 16 (Vodafone TR) and I'm a WhatsApp and blip.me user so you can use those applications to contact me.
 contact_form_title: form
 contact_form_small: <i>some people's favorite</i> way.
-contact_form_text: >
+contact_form_text: |
     just a simple form, names and e-mails are not required. also, this is the recommend way for death treats. (have some death treats? formspring is more anon. but this is faster, your choice.)
