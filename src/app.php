@@ -2,12 +2,16 @@
 
 $app->get('/', function() use ($app) {
 
-	$birthday = new DateTime('1995-06-21'); //@TODO: make this a global variable
+	$birthday = new DateTime('1995-06-21 14:35'); //@TODO: make this a global variable
 	$today = new DateTime();
-	$interval = $birthday->diff($today);
+	$beenalivefor = $birthday->diff($today);
 
- 	$data['beenalivefor'] = $interval->y . " years, " . $interval->m." months and ".$interval->d." days"; 
- 	
+ 	$data['beenalivefor'] = $beenalivefor->y . ' years, '
+		. $beenalivefor->m.' months, '
+		. $beenalivefor->d.' days, '
+ 		. $beenalivefor->h.' hours and '
+		. $beenalivefor->m.' minutes, ';
+		
  	$hellotexts = array('Hi there', 'Hello', 'Hi', 'Merhaba', 'Hey');
 	$hellotext = array_rand($hellotexts);
 	$data['hellotext'] = $hellotexts[$hellotext];
