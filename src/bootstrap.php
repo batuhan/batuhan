@@ -3,6 +3,12 @@
 require_once __DIR__.'/../vendor/silex.phar';
 require_once 'settings.php';
 
+$domain = $_SERVER['SERVER_NAME'];
+
+if($domain === 'batuhanicoz.com.tr'){
+	$locale = 'tr';
+}
+
 use Silex\Application;
 use Silex\Extension\TwigExtension;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,6 +32,7 @@ $app->register(new TwigExtension(), array(
 
 $app->register(new Silex\Extension\TranslationExtension(), array( 
     'translation.class_path' =>  __DIR__.'/../vendor/Symfony/src', 
+	'locale' => $locale,
     'locale_fallback' => 'en', 
 )); 
 

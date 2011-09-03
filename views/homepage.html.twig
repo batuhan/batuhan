@@ -5,7 +5,7 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-        <h1>{{ hellotext }}, I'm Batuhan.</h1>
+        <h1>{{ app.translator.trans('homepage_top_hello') }}</h1>
         <p>I'm a web developer, 
         an amateur entrepreneur and a student. I've been around for {{ beenalivefor }}.
 		</p>
@@ -37,9 +37,9 @@
 		<a href="http://twitter.com/batuhanicoz" class="twitter-follow-button" data-show-count="false">Follow @batuhanicoz</a>
 		</p>
 		<p>
-			<a class="btn primary large">{{ app.translator.trans('homepage_about_me') }} &raquo;</a>
-			<a class="btn primary large">My projects &raquo;</a>
-			<a class="btn primary large">Contact me &raquo;</a>
+			<a class="btn primary large">{{ app.translator.trans('homepage_l_about_me') }} &raquo;</a>
+			<a class="btn primary large">{{ app.translator.trans('homepage_l_my_projects') }} &raquo;</a>
+			<a class="btn primary large">{{ app.translator.trans('homepage_l_contact_me') }} &raquo;</a>
 		</p>
       </div>
 
