@@ -24,6 +24,8 @@ $app->register(new TwigExtension(), array(
 ));
 
 $app['bi_domain'] = $_SERVER['SERVER_NAME'];
+$browser_lang = explode($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+$app['bi_browser_lang'] = $browser_lang[0];
 
 if($app['bi_domain'] === 'batuhanicoz.com.tr'){
 	$locale = 'tr';
