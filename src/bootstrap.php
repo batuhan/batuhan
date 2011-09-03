@@ -1,15 +1,6 @@
 <?php
 
 require_once __DIR__.'/../vendor/silex.phar';
-include 'settings.php';
-
-$domain = $_SERVER['SERVER_NAME'];
-
-if($domain === 'batuhanicoz.com.tr'){
-	$locale = 'tr';
-}else{
-	$locale = 'en';
-}
 
 use Silex\Application;
 use Silex\Extension\TwigExtension;
@@ -32,6 +23,14 @@ $app->register(new TwigExtension(), array(
   ),
 ));
 
+$app['bi_domain'] = $_SERVER['SERVER_NAME'];
+
+if($app['bi_domain'] === 'batuhanicoz.com.tr'){
+	$locale = 'tr';
+}else{
+	$locale = 'en';
+}
+
 $app->register(new Silex\Extension\TranslationExtension(), array( 
     'translation.class_path' =>  __DIR__.'/../vendor/Symfony/src', 
 	'locale' => $locale,
@@ -44,6 +43,7 @@ $app['translator.messages'] = array(
 ); 
 
 $app['translator.loader'] = new Symfony\Component\Translation\Loader\YamlFileLoader(); 
+
 
 $app->before(function () use ($app) {
     if ($locale = $app['request']->get('locale')) {
