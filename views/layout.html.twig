@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}Fırat Batuhan İçöz</title>
-    <meta name="description" content="A place you can find everthing about Fırat Batuhan İçöz and his work.">
+    <meta name="description" content="{{ desc }}">
     <meta name="author" content="Fırat Batuhan İçöz">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -29,15 +29,15 @@
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container">
-          <h3><a href="#">Batuhan's </a></h3>
+          <h3><a href="#">{{ app.translator.trans('l_batuhans') }}</a></h3>
           <ul class="nav">
-	      	<li class="active"><a href="http://{{ app.bi_domain }}/">Homepage</a></li>
-	      	<li><a href="http://{{ domain }}/about">About</a></li>
+	      	<li class="active"><a href="http://{{ app.bi_domain }}/">{{ app.translator.trans('l_homepage') }}</a></li>
+	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_about') }}">{{ app.translator.trans('l_about_me') }}</a></li>
 	      	<li><a href="http://changelog.batu.me">Changelog</a></li>
 	      	<li><a href="http://blog.batu.me">Blog</a></li>
 	      	<li><a href="http://batu.me/projects">Projects</a></li>
 	      	<li><a href="http://shareables.me">Shareables</a></li>
-	      	<li><a href="http://{{ domain }}/contact">Contact</a></li>
+	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_contact') }}">{{ app.translator.trans('l_contact_me') }}</a></li>
           </ul>
         </div>
       </div>

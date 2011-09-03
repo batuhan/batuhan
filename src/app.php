@@ -20,7 +20,7 @@ $app->get($app['translator']->trans('route_contact'), function() use ($app) {
   
 });
 
-$app->get('/about', function() use ($app) {
+$app->get($app['translator']->trans('route_about'), function() use ($app) {
   
   return $app['twig']->render('about.html.twig');
   
@@ -29,29 +29,5 @@ $app->get('/about', function() use ($app) {
 $app->get('/lifestream', function() use ($app) {
   
   return $app['twig']->render('lifestream.html.twig');
-  
-});
-
-$app->get('/donate', function() use ($app) {
-  
-  return $app['twig']->render('donate.html.twig');
-  
-});
-
-$app->get('/questions', function() use ($app) {
-  
-  return $app['twig']->render('questions.html.twig');
-  
-});
-
-$app->get('/questions/ask', function() use ($app) {
-  
-  return $app['twig']->render('questions_ask.html.twig');
-  
-});
-
-$app->get('/locate', function() use ($app) {
-  
-  return $app['twig']->render('locate.html.twig');
   
 });

@@ -3,12 +3,10 @@
 {% block content %}
     <div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>{{ app.translator.trans('homepage_top_hello') }}</h1>
-        <p>I'm a web developer, 
-        an amateur entrepreneur and a student. I've been around for {{ beenalivefor }}.
-		</p>
+        <p>{{ app.translator.trans('homepage_tagline') }}</p>
+ 		<p>I've been around for {{ beenalivefor }}.</p>
         <p>
        	<a href="http://www.facebook.com/batuhanicoz">
     		<img src="./assets/img/icons/facebook-32x32.png" alt="Facebook" />
