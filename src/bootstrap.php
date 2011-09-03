@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__.'/../vendor/silex.phar';
-require_once 'settings.php';
+include 'settings.php';
 
 $domain = $_SERVER['SERVER_NAME'];
 
