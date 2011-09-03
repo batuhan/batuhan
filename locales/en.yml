@@ -9,6 +9,10 @@ l_contact_me: Contact me
 
 desc: A place you can find everthing about Fırat Batuhan İçöz and his work.
 
+langwarning_text: <strong>Merhaba!</strong> Tarayıcı dilinizin Türkçe olduğunu farkettim, bu sitenin Türkçe versiyonu de olduğunu hatırlatayım dedim.
+langwarning_button: Türkçe siteye git
+langwarning_ignore: Never show this again
+
 homepage_top_hello: Hello, I'm Batuhan İçöz.
 homepage_tagline: I'm a web developer, an amateur entrepreneur and a student.
 homepage_twitter_follow: Follow

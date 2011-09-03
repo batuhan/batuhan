@@ -51,9 +51,9 @@
 		<section id="language_alert">
 	      <div class="alert-message block-message info">
 	        <a class="close" href="#">&times;</a>
-	        <p>{% if app.bi_browser_lang == "tr-TR" %}<strong>Merhaba!</strong> Tarayıcı dilinizin Türkçe olduğunu farkettim, bu sitenin Türkçe versiyonu de olduğunu hatırlatayım dedim.{% endif %}</p>
+	        <p>{{ app.translator.trans('langwarning_text') }}</p>
 	        <div class="alert-actions">
-	          <a class="btn small" href="#">{% if app.bi_browser_lang == "tr-TR" %}Türkçe siteye git{% endif %}</a> <a class="btn small" href="#">Bu uyarıyı bir daha gösterme.</a>
+	          <a class="btn small" href="http://batuhanicoz.com{% if app.bi_browser_lang == "tr-TR" AND app.bi_domain == "batuhanicoz.com" %}.tr{% endif %}/">{{ app.translator.trans('langwarning_button') }}</a> <a class="btn small" href="#">{{ app.translator.trans('langwarning_ignore') }}</a>
 	        </div>
 	      </div>
 		</section>
