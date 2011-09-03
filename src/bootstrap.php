@@ -10,7 +10,8 @@ $app = new Application();
 
 $app['autoloader']->registerNamespace('Symfony', __DIR__.'/../vendor/symfony/src');
 
-$app['debug'] = TRUE;
+if($_SERVER['REMOTE_ADDR'] === '62.248.41.112')
+	$app['debug'] = TRUE;
 
 // Register Silex Extensions
 $app->register(new TwigExtension(), array(
