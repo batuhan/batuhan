@@ -14,8 +14,8 @@ $app->get('/', function() use ($app) {
   return $app['twig']->render('homepage.html.twig', $data);
 });
 
-$app->get('contact', contact_page());
-function contact_page() use ($app){
+$app->get('contact', contact_page() use ($app));
+function contact_page(){
 	return $app['twig']->render('contact.html.twig');
 }
 $app->get('/about', function() use ($app) {
