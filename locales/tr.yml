@@ -1,0 +1,44 @@
+lang: tr
+lang_name: Türkçe
+
+route_about: hakkimda
+route_contact: iletisim
+
+l_batuhans: Batuhan'ın
+l_homepage: Anasayfa
+l_about_me: Hakkımda
+l_my_projects: Projelerim
+l_contact_me: İletişim
+
+desc: Fırat Batuhan İçöz ve yaptıkları hakkında her şeyi bulabileceğiniz bir yer.
+
+homepage_top_hello: > 
+    Merhaba, ben Batuhan İçöz.
+homepage_tagline: >
+    Web geliştiricisi, amatör girişimci ve öğrenciyim. 
+homepage_twitter_follow: Takip et
+homepage_currently: |
+    Şu an 17 yaşındayım ve  <a href="#">müthiş şeyler</a> yapıyorum.
+about_title: Hakkında her şey 
+
+contact_title: İletişime geç
+contact_h1: İletişim
+contact_h1_small: > 
+    e-postalarım, telefon numaram, ev adresim ve dahası.
+contact_text: >
+    Benimle iletişime geçmek yeterince kolay ve genelde hızlı geri dönerim, ancak bazen çok meşgul olabiliyorum,
+    uzun lafın kısası, iletişime geçmeden önce, cevap vermemin 1 ila 3 gün sürebileceğini aklınızda bulundurmanız iyi olabilir.
+contact_emails_title: e-posta(lar)
+contact_emails_small: |
+    <i>en hızlı</i> yol.
+contact_emails_text: |
+    My primary e-mail address is i@batu.me but sometimes e-mail clients are finding it short and may think it's not real, if that happens, you can use batuhanicoz@gmail.com, which is slower, but works.
+    Also, if you're comfortable with Facebook Messages, you can always use batuhanicoz@facebook.com but if your e-mail ends up in Other section, sorry, I'm checking it once 1 week.
+contact_phones_title: phone(s)
+contact_phones_small: my <i>favorite</i> way.
+contact_text: |
+    My primary cell phone number is +90 (538) 878 10 16 (Vodafone TR) and I'm a WhatsApp and blip.me user so you can use those applications to contact me.
+contact_form_title: form
+contact_form_small: <i>some people's favorite</i> way.
+contact_form_text: |
+    just a simple form, names and e-mails are not required. also, this is the recommend way for death treats. (have some death treats? formspring is more anon. but this is faster, your choice.)

@@ -1,3 +1,6 @@
+lang: en
+lang_name: English
+
 route_about: about
 route_contact: contact
 
@@ -13,7 +16,7 @@ homepage_top_hello: "Hello, I'm Batuhan İçöz."
 homepage_tagline: "I'm a web developer, an amateur entrepreneur and a student."
 homepage_twitter_follow: Follow
 homepage_currently: |
-    I'm currently 17-year-old and doing <a href="#">some awesome stuff</a>:
+    I'm currently 17-year-old and doing <a href="#">some awesome stuff</a>.
 about_title: Everything About 
 
 contact_title: Get in touch with
