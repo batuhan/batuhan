@@ -7,6 +7,8 @@ $domain = $_SERVER['SERVER_NAME'];
 
 if($domain === 'batuhanicoz.com.tr'){
 	$locale = 'tr';
+}else{
+	$locale = 'en';
 }
 
 use Silex\Application;
