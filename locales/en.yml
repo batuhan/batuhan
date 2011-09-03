@@ -1,5 +1,5 @@
-route_about: /about
-route_contact: /contact
+route_about: about
+route_contact: contact
 
 l_batuhans: Batuhan's
 l_homepage: Homepage
