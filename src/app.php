@@ -25,9 +25,3 @@ $app->get($app['translator']->trans('route_about'), function() use ($app) {
   return $app['twig']->render('about.html.twig');
   
 });
-
-$app->get('/lifestream', function() use ($app) {
-  
-  return $app['twig']->render('lifestream.html.twig');
-  
-});
