@@ -32,9 +32,7 @@
           <h3><a href="http://batu.me/1">{{ app.translator.trans('l_batuhans') }}</a></h3>
           <ul class="nav">
 	      	<li class="active"><a href="http://{{ app.bi_domain }}/">{{ app.translator.trans('l_homepage') }}</a></li>
-	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_about') }}">{{ app.translator.trans('l_about_me') }}</a></li>
-	      	<li><a href="http://changelog.batu.me">Changelog</a></li>
-	      	<li><a href="http://batu.me">Blog</a></li>
+	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_about') }}">{{ _server.request_uri }}{{ app.translator.trans('l_about_me') }}</a></li>
 	      	<li><a href="http://shareables.me">Shareables</a></li>
 	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_contact') }}">{{ app.translator.trans('l_contact_me') }}</a></li>
           </ul>
