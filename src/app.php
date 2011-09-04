@@ -24,6 +24,7 @@ $app->get($app['translator']->trans('route_about'), function() use ($app) {
 	
   $file = 'about.html.twig';
   $last_updated = filemtime( __DIR__.'/../views/'.$file);
-  return $app['twig']->render($file);
+  $data['last_updated'] = date ("F d Y H:i:s.", $last_updated);
+  return $app['twig']->render($file, $data);
   
 });
