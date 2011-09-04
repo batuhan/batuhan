@@ -21,7 +21,9 @@ $app->get($app['translator']->trans('route_contact'), function() use ($app) {
 });
 
 $app->get($app['translator']->trans('route_about'), function() use ($app) {
-  
-  return $app['twig']->render('about.html.twig');
+	
+  $file = 'about.html.twig';
+  $last_updated = filemtime( __DIR__.'/../views/'.$file);
+  return $app['twig']->render($file);
   
 });
