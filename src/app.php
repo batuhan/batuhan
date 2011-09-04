@@ -28,3 +28,10 @@ $app->get($app['translator']->trans('route_about'), function() use ($app) {
   return $app['twig']->render($file, $data);
   
 });
+
+
+$app->get($app['translator']->trans('route_pages').'/{page}', function($page) use ($app) {
+  
+  return $app['twig']->render('pages/'.$page.'.html.twig');
+  
+});
