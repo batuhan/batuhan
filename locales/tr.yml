@@ -5,7 +5,7 @@ route_about: hakkimda
 route_contact: iletisim
 route_pages: sayfalar
 
-l_batuhans: Batuhan'ın Yeri
+l_batuhans: Batuhan İçöz
 l_homepage: Anasayfa
 l_about_me: Hakkımda
 l_my_projects: Projelerim
@@ -16,7 +16,7 @@ desc: Fırat Batuhan İçöz ve yaptıkları hakkında her şeyi bulabileceğini
 homepage_top_hello: > 
     Merhaba, ben Batuhan İçöz.
 homepage_tagline: >
-    17 yaşında Tür web geliştiricisi ve öğrenci. 
+    17 yaşında Türk web geliştiricisi ve öğrenci. 
 homepage_twitter_follow: Takip et
 homepage_currently: |
     
