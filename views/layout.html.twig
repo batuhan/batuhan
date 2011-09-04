@@ -31,10 +31,10 @@
         <div class="container">
           <h3><a href="http://batu.me/1">{{ app.translator.trans('l_batuhans') }}</a></h3>
           <ul class="nav">
-	      	<li class="active"><a href="http://{{ app.bi_domain }}/">{{ app.translator.trans('l_homepage') }}</a></li>
-	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_about') }}">{{ app.translator.trans('l_about_me') }}</a></li>
+	      	<li{% block is_homepage %}{% endblock %}><a href="http://{{ app.bi_domain }}/">{{ app.translator.trans('l_homepage') }}</a></li>
+	      	<li{% block is_about %}{% endblock %}><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_about') }}">{{ app.translator.trans('l_about_me') }}</a></li>
 	      	<li><a href="http://shareables.me">Shareables</a></li>
-	      	<li><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_contact') }}">{{ app.translator.trans('l_contact_me') }}</a></li>
+	      	<li{% block is_contact %}{% endblock %}><a href="http://{{ app.bi_domain }}/{{ app.translator.trans('route_contact') }}">{{ app.translator.trans('l_contact_me') }}</a></li>
           </ul>
           <ul class="nav secondary-nav">
 			<li></li>
