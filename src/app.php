@@ -29,6 +29,11 @@ $app->get($app['translator']->trans('route_about'), function() use ($app) {
   
 });
 
+$app->get($app['translator']->trans('route_legal'), function() use ($app) {
+  
+  return $app['twig']->render($app['translator']->trans('route_legal').'.html.twig');
+  
+});
 
 $app->get($app['translator']->trans('route_pages').'/{page}', function($page) use ($app) {
   
