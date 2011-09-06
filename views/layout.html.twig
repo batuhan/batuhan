@@ -44,6 +44,17 @@
     </div>
 	<div class="topbar_break"></div>
 	
+	{% if app.bi_domain == "batuhanicoz.com.tr" %}
+	<div class="container">
+		<section id="language_alert">
+	      <div class="alert-message block-message info">
+	        <p><strong>Merhaba,</strong> henüz bu sitedeki bilgileri tamamlayamadığımdan sitemin Türkçe çevirisi eksiktir, tüm kısımları yakında çevirmeyi planlamaktayım..</p>
+	      </div>
+		</section>
+    </div>
+	{% endif %}
+		
+	<!--
 	{% if app.bi_browser_lang == "tr-TR" %}
 	{% if app.bi_domain == "batuhanicoz.com" %}
 	<div class="container">
@@ -58,6 +69,7 @@
     </div>
 	{% endif %}
 	{% endif %}
+	-->
 	
       {% block content %}{% endblock %}
       
