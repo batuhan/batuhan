@@ -1,6 +1,6 @@
 {% extends "layout.html.twig" %}
 {% block is_contact %} class="active"{% endblock %}
-{% block add_to_header %} {% endblock %}
+{% block title %}{{ app.translator.trans('contact_title') }} {% endblock %}
 {% block add_to_footer %} <script type="text/javascript" src="http://download.skype.com/share/skypebuttons/js/skypeCheck.js"></script> {% endblock %}
 
 {% block content %}
