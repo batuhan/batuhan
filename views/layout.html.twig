@@ -14,6 +14,7 @@
     <!-- Le styles -->
     <link href="http://static.batu.me/assets/css/bootstrap-1.2.0.min.css" rel="stylesheet">
     <link href="http://static.batu.me/assets/css/custom.bi.css" rel="stylesheet">
+	{% block add_to_header %}{% endblock %}
 
   </head>
 
@@ -93,6 +94,7 @@
 	  })();
 	</script>
 	<script src="http://connect.facebook.net/en_US/all.js#appId=204305079632336&amp;xfbml=1"></script>
+	{% block add_to_footer %}{% endblock %}
 	<!-- Piwik --> 
 	<script type="text/javascript">
 	var pkBaseURL = (("https:" == document.location.protocol) ? "https://stats.batu.me/" : "http://stats.batu.me/");
