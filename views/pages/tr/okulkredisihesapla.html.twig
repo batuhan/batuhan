@@ -106,13 +106,16 @@ $(document).ready(function() {
 			<div class="span5" align="right">
 		      <h2>Yardım</h2>
 		      <p>Sağ tarafta ilk boşluğa dersteki yıl sonu notunu 5 üstünden, ikinci boşluğa dersin haftalık saat sayısını ve sonraki sayfada düzeltme yapabilmek veya bilgileri paylaşabilmek için üçüncü boşluğa ders adı girebilirsin. Üçüncü kısım boş bırakılabilir.</p>
+		{% if dersler %}
 			  <h2>Sonuçlar</h2>
 			  <p><strong>Kredi: </strong> {{ toplamkredi }}</p>
 			  <p>Nasıl hesapladık?<br />
 			 {% for ders in dersler %}
 			 {{ ders }}
+			<br />
 			{% endfor %}
 			</p>
+		{% endif %}
 		    </div>
 		  </div><!-- /row -->
 		</section>
