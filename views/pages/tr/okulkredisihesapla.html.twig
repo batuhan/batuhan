@@ -1,0 +1,110 @@
+{% extends "layout.html.twig" %}
+{% block title %}Lise yıl sonu kredisi hesap uygulaması - {% endblock %}
+{% block desc %}Lise yıl sonu kredisi hesap uygulaması yıl sonu kredinizi kolayca hesaplayabilirsiniz. (c) Batuhan İçöz{% endblock %}
+
+{% block add_to_footer %}
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $('#dersekle').click(function() {
+        $('p.ders:last').after('<p class="ders"><input type="text" name="ders_notu[]" size="1" placeholder="0"><input type="text" name="ders_saati[]" size="1" placeholder="0"></p>');
+    });
+    
+    $('#derssil').click(function() {
+        $('p.ders:last').remove();
+    });
+
+});
+</script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+		
+		<!-- Lise kredi hesaplama
+		================================================== -->
+		<section id="okulkredisihesaplama">
+		  <div class="page-header">
+		    <h1>Kaç kredim var? <small>Lise öğrencilerine yıl sonu kredisi hesaplama uygulaması</small></h1>
+		  </div>
+		  <div class="row">
+		    <div class="span4">
+		      <h2>Yardım</h2>
+		      <p>Sağ tarafta ilk boşluğa dersin haftalık saat sayısını, ikinci boşluğa yıl sonu notunuzu 5 üzerinden giriniz. Dilerseniz, sonraki sayfada düzeltme yapabilmek veya bilgileri paylaşabilmek için üçüncü boşluğa ders adı girebilirsiniz. Üçüncü kısım boş bırakılabilir.</p>
+		    </div>
+		    <div class="span12">
+				<form>
+		            <label for="ders1"><span id="dersadi">Ders 1</a></label>
+					<div class="row show-grid">
+						<div class="span1">
+							<input class="span2" id="" name="" type="text" />
+						</div>
+						<div class="span2">
+							<input class="span1" id="" name="" type="text" />
+						</div>
+					</div>
+		            <div class="input">
+		              <div class="input-prepend">
+		                <span class="add-on">Haftalık ders saati</span>
+		                <input class="xlarge" id="prependedInput" name="prependedInput" size="16" type="text" />
+						<br />
+						<span class="help-inline">Dersin haftada kaç saat olduğunu yazınız.</span>
+		              </div>
+					</div>
+					<br />
+					<div class="input">
+		              <div class="input-prepend">
+		                <span class="add-on">Alınan not</span>
+		                <input class="xlarge" id="prependedInput" name="prependedInput" size="16" type="text" />
+						<br />
+						<span class="help-inline">0 ve 5 arasında, 5 üzerinden ders notunuz.</span>
+		              </div>
+					</div>
+					<br />
+					<div class="input">
+		              <div class="input-prepend">
+		                <span class="add-on">Ders adı</span>
+		                <input class="xlarge" id="dersadi" name="dersadi" placeholder="örn. Matematik" size="16" type="text" />
+						<br />
+						<span class="help-inline">Boş bırakabilirsiniz.</span>
+		              </div>
+		            </div>
+<!-- -->		
+					<div class="clearfix">
+		            <label for="ders1"><span id="dersadi">Ders 1</a></label>
+		            <div class="input">
+		              <div class="input-prepend">
+		                <span class="add-on">Haftalık ders saati</span>
+		                <input class="xlarge" id="prependedInput" name="prependedInput" size="3" type="text" />
+						<br />
+						<span class="help-inline">Dersin haftada kaç saat olduğunu yazınız.</span>
+		              </div>
+					</div>
+					<br />
+					<div class="input">
+		              <div class="input-prepend">
+		                <span class="add-on">Alınan not</span>
+		                <input class="xlarge" id="prependedInput" name="prependedInput" size="3" type="text" />
+						<br />
+						<span class="help-inline">0 ve 5 arasında, 5 üzerinden ders notunuz.</span>
+		              </div>
+					</div>
+					<br />
+					<div class="input">
+		              <div class="input-prepend">
+		                <span class="add-on">Ders adı</span>
+		                <input class="xlarge" id="dersadi" name="dersadi" placeholder="örn. Matematik" size="16" type="text" />
+						<br />
+						<span class="help-inline">Boş bırakabilirsiniz.</span>
+		              </div>
+		            </div>
+		          </div><!-- /clearfix -->
+				</form>
+			</div>
+		  </div><!-- /row -->
+		</section>
+	
+    </div> <!-- /container -->
+
+
+{% endblock %}
