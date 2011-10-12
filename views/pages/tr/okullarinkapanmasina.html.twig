@@ -1,0 +1,37 @@
+{% extends "layout.html.twig" %}
+{% block add_to_footer %}
+<script src="http://static.batu.me/assets/javascript/libs/jquery.jcountdown.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$("#kaczamankaldi").countdown({
+		date: "june 15, 2012",
+		htmlTemplate: "%{d} gün %{h} saat %{m} dakika ve %{s} saniye"
+	});
+	
+});
+</script>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+	<section id="okullarinkapanmasina">
+	  <div class="page-header">
+	    <h1>Okullar ne zaman kapanıyor? <!-- small>Yarı yıl tatili ne zaman?</small --></h1>
+	  </div>
+
+      <div class="hero-unit">
+        <h2><span id="kaczamankaldi">0</span>* <small>sonra okullar kapanıyor!</small></h2>
+
+		<div class="clearfix"></div>
+        <p>
+		<fb:like send="true" width="450" show_faces="false"></fb:like>
+		</p>
+		<h6>*15 Haziran 1012 tarihinde saat 12:30'a ayarlıdır.</h6>
+
+      </div>
+	</section>
+    </div> <!-- /container -->
+
+{% endblock %}
+
