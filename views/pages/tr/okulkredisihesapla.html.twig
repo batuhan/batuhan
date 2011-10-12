@@ -1,19 +1,73 @@
 {% extends "layout.html.twig" %}
 {% block title %}Lise yıl sonu kredisi hesap uygulaması - {% endblock %}
 {% block desc %}Lise yıl sonu kredisi hesap uygulaması yıl sonu kredinizi kolayca hesaplayabilirsiniz. (c) Batuhan İçöz{% endblock %}
+{% block add_to_header %}
+<style>
+.ittir {
+padding-left:20px;
+}
+</style>
+{% endblock %}
 
 {% block add_to_footer %}
 <script type="text/javascript">
 $(document).ready(function() {
 
+	console.log('sistem baslatildi');
+	
+	var derssayisi = 2;
+	console.log(derssayisi + ' ders var');
+		
+	function dersEkle(){
+		console.log(derssayisi + ' ders var, ekleme öncesi');
+		derssayisi = derssayisi + 1;
+		console.log(derssayisi + ' ders var, ekleme öncesi');
+		$('.dersler:last').after('<tr class="dersler" id="ders' + derssayisi + '"><td><h5 class="span3"><span id="ders' + derssayisi + '_adi_baslik">Ders ' + derssayisi + '</span></h5></td><td><input class="span1" id="ders' + derssayisi + '_notu" name="dersNotu[]" type="text" placeholder="3" /></td><td><input class="span1" id="ders' + derssayisi + '_saati" name="dersSaati[]" type="text" placeholder="4" /></td><td><input class="span4" id="ders' + derssayisi + '_adi" name="dersAdi[]" type="text" placeholder="Ders adı" /></td></tr>');
+		console.log('bir ders eklendi');
+		console.log(derssayisi + ' ders var, ekleme sonrası');
+		
+		kontrolMekanizmasi();
+			
+	}
+	
+	function dersCikar(){
+
+		console.log(derssayisi + ' ders var, çıkarma öncesi');
+		if(derssayisi == 1){
+			console.log('tek ders var, silmesek daha iyi kanka');
+		}else{
+			$('#ders' + derssayisi).remove();
+			derssayisi = derssayisi - 1;
+			console.log('bir ders cikartildi');
+			console.log(derssayisi + ' ders var, çıkarma sonrası');
+		}
+
+	
+	}
+	
+	
     $('#dersekle').click(function() {
-        $('p.ders:last').after('<p class="ders"><input type="text" name="ders_notu[]" size="1" placeholder="0"><input type="text" name="ders_saati[]" size="1" placeholder="0"></p>');
+
+		dersEkle();
+		
     });
     
-    $('#derssil').click(function() {
-        $('p.ders:last').remove();
-    });
+    $('#derscikar').click(function() {
 
+		dersCikar();
+
+    });
+	
+	function kontrolMekanizmasi(){
+		$('input[name*="dersAdi"]').keyup(function(dersBaslikBilgileri){
+			
+			$('#' + dersBaslikBilgileri.target.id + '_baslik').html(dersBaslikBilgileri.target.value);
+
+		});
+	}
+	
+	kontrolMekanizmasi();
+	
 });
 </script>
 {% endblock %}
@@ -28,79 +82,40 @@ $(document).ready(function() {
 		    <h1>Kaç kredim var? <small>Lise öğrencilerine yıl sonu kredisi hesaplama uygulaması</small></h1>
 		  </div>
 		  <div class="row">
-		    <div class="span4">
-		      <h2>Yardım</h2>
-		      <p>Sağ tarafta ilk boşluğa dersin haftalık saat sayısını, ikinci boşluğa yıl sonu notunuzu 5 üzerinden giriniz. Dilerseniz, sonraki sayfada düzeltme yapabilmek veya bilgileri paylaşabilmek için üçüncü boşluğa ders adı girebilirsiniz. Üçüncü kısım boş bırakılabilir.</p>
-		    </div>
-		    <div class="span12">
+		    <div class="span11">
+		<div id="debug" style="display:none;">DEBUG THIS</div>
 				<form>
-		            <label for="ders1"><span id="dersadi">Ders 1</a></label>
-					<div class="row show-grid">
-						<div class="span1">
-							<input class="span2" id="" name="" type="text" />
-						</div>
-						<div class="span2">
-							<input class="span1" id="" name="" type="text" />
-						</div>
-					</div>
-		            <div class="input">
-		              <div class="input-prepend">
-		                <span class="add-on">Haftalık ders saati</span>
-		                <input class="xlarge" id="prependedInput" name="prependedInput" size="16" type="text" />
-						<br />
-						<span class="help-inline">Dersin haftada kaç saat olduğunu yazınız.</span>
-		              </div>
-					</div>
-					<br />
-					<div class="input">
-		              <div class="input-prepend">
-		                <span class="add-on">Alınan not</span>
-		                <input class="xlarge" id="prependedInput" name="prependedInput" size="16" type="text" />
-						<br />
-						<span class="help-inline">0 ve 5 arasında, 5 üzerinden ders notunuz.</span>
-		              </div>
-					</div>
-					<br />
-					<div class="input">
-		              <div class="input-prepend">
-		                <span class="add-on">Ders adı</span>
-		                <input class="xlarge" id="dersadi" name="dersadi" placeholder="örn. Matematik" size="16" type="text" />
-						<br />
-						<span class="help-inline">Boş bırakabilirsiniz.</span>
-		              </div>
-		            </div>
-<!-- -->		
-					<div class="clearfix">
-		            <label for="ders1"><span id="dersadi">Ders 1</a></label>
-		            <div class="input">
-		              <div class="input-prepend">
-		                <span class="add-on">Haftalık ders saati</span>
-		                <input class="xlarge" id="prependedInput" name="prependedInput" size="3" type="text" />
-						<br />
-						<span class="help-inline">Dersin haftada kaç saat olduğunu yazınız.</span>
-		              </div>
-					</div>
-					<br />
-					<div class="input">
-		              <div class="input-prepend">
-		                <span class="add-on">Alınan not</span>
-		                <input class="xlarge" id="prependedInput" name="prependedInput" size="3" type="text" />
-						<br />
-						<span class="help-inline">0 ve 5 arasında, 5 üzerinden ders notunuz.</span>
-		              </div>
-					</div>
-					<br />
-					<div class="input">
-		              <div class="input-prepend">
-		                <span class="add-on">Ders adı</span>
-		                <input class="xlarge" id="dersadi" name="dersadi" placeholder="örn. Matematik" size="16" type="text" />
-						<br />
-						<span class="help-inline">Boş bırakabilirsiniz.</span>
-		              </div>
-		            </div>
-		          </div><!-- /clearfix -->
-				</form>
+						<table border="0">
+							<tr class="dersler" id="ders1">
+								<td><h5 class="span3"><span id="ders1_adi_baslik">Ders 1</span></h5></td>
+								<td><input class="span1" id="ders1_notu" name="dersNotu[]" type="text" placeholder="5" /></td>
+								<td><input class="span1" id="ders1_saati" name="dersSaati[]" type="text" placeholder="3" /></td>
+								<td><input class="span4" id="ders1_adi" name="dersAdi[]" type="text" placeholder="Matematik" /></td>
+							</tr>
+							<tr class="dersler" id="ders2">
+							<td><h5 class="span3"><span id="ders2_adi_baslik">Ders 2</span></h5></td>
+								<td><input class="span1" id="ders2_notu" name="dersNotu[]" type="text" placeholder="3" /></td>
+								<td><input class="span1" id="ders2_saati" name="dersSaati[]" type="text" placeholder="4" /></td>
+								<td><input class="span4" id="ders2_adi" name="dersAdi[]" type="text" placeholder="İngilizce" /></td>
+							</tr>
+
+						</table>
+						<div class="well">
+						<a href="#" class="btn large info" id="dersekle">+ Ders Ekle</a>
+				        <a href="#" class="btn large info" id="derscikar">- Ders Çıkar</a>
+				        
+				        <a href="#" class="btn large primary">Hesapla</a>
+				        <a href="#" class="btn large">Sıfırla</a>
+				      </div>
+					</form>
+					
 			</div>
+			<div class="span5" align="right">
+		      <h2>Yardım</h2>
+		      <p>Sağ tarafta ilk boşluğa dersteki yıl sonu notunu 5 üstünden, ikinci boşluğa dersin haftalık saat sayısını ve sonraki sayfada düzeltme yapabilmek veya bilgileri paylaşabilmek için üçüncü boşluğa ders adı girebilirsin. Üçüncü kısım boş bırakılabilir.</p>
+			  <h2>Sonuçlar</h2>
+			
+		    </div>
 		  </div><!-- /row -->
 		</section>
 	
