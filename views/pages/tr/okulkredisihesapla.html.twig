@@ -18,6 +18,8 @@ $(document).ready(function() {
 	var derssayisi = 2;
 	console.log(derssayisi + ' ders var');
 		
+	$('#dersekle').click(dersEkle());
+    
 	function dersEkle(){
 		console.log(derssayisi + ' ders var, ekleme öncesi');
 		derssayisi = derssayisi + 1;
@@ -30,6 +32,9 @@ $(document).ready(function() {
 			
 	}
 	
+	
+	$('#derscikar').click(dersCikar());
+    
 	function dersCikar(){
 
 		console.log(derssayisi + ' ders var, çıkarma öncesi');
@@ -41,22 +46,9 @@ $(document).ready(function() {
 			console.log('bir ders cikartildi');
 			console.log(derssayisi + ' ders var, çıkarma sonrası');
 		}
-
 	
 	}
-	
-	
-    $('#dersekle').click(function() {
-
-		dersEkle();
-		
-    });
-    
-    $('#derscikar').click(function() {
-
-		dersCikar();
-
-    });
+	    
 	
 	function kontrolMekanizmasi(){
 		$('input[name*="dersAdi"]').keyup(function(dersBaslikBilgileri){
@@ -84,7 +76,7 @@ $(document).ready(function() {
 		  <div class="row">
 		    <div class="span11">
 		<div id="debug" style="display:none;">DEBUG THIS</div>
-				<form>
+				<form action="okulkredisihesapla-sonuc.html" method="get">
 						<table border="0">
 							<tr class="dersler" id="ders1">
 								<td><h5 class="span3"><span id="ders1_adi_baslik">Ders 1</span></h5></td>
@@ -100,12 +92,13 @@ $(document).ready(function() {
 							</tr>
 
 						</table>
+						<input type="hidden" name="lang" value="tr" />
 						<div class="well">
 						<a href="#" class="btn large info" id="dersekle">+ Ders Ekle</a>
 				        <a href="#" class="btn large info" id="derscikar">- Ders Çıkar</a>
 				        
-				        <a href="#" class="btn large primary">Hesapla</a>
-				        <a href="#" class="btn large">Sıfırla</a>
+						<input type="submit" value="Hesapla" class="btn large primary" />
+				        <input type="reset" value="Sıfırla" class="btn large" />
 				      </div>
 					</form>
 					
@@ -114,7 +107,12 @@ $(document).ready(function() {
 		      <h2>Yardım</h2>
 		      <p>Sağ tarafta ilk boşluğa dersteki yıl sonu notunu 5 üstünden, ikinci boşluğa dersin haftalık saat sayısını ve sonraki sayfada düzeltme yapabilmek veya bilgileri paylaşabilmek için üçüncü boşluğa ders adı girebilirsin. Üçüncü kısım boş bırakılabilir.</p>
 			  <h2>Sonuçlar</h2>
-			
+			  <p><strong>Kredi: </strong> {{ toplamkredi }}</p>
+			  <p>Nasıl hesapladık?<br />
+			 {% for ders in dersler %}
+			 {{ ders }}
+			{% endfor %}
+			</p>
 		    </div>
 		  </div><!-- /row -->
 		</section>

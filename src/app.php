@@ -34,7 +34,32 @@ $app->get($app['translator']->trans('route_legal'), function() use ($app) {
   return $app['twig']->render($app['translator']->trans('route_legal').'.html.twig');
   
 });
-
+if($app['locale'] === 'tr'){
+	$app->get('okulkredisihesapla-sonuc.html', function() use ($app) {
+		
+		$i = 0;
+		foreach($_GET['dersNotu'] as $dersNotu){
+			
+			$dersinKredisi = $dersNotu * $_GET['dersSaati'][$i];
+			 
+			$dersler[] = '('.$dersNotu.' * '.$_GET['dersSaati'][$i].') = '.$dersinKredisi;
+			$krediler[$i] = $dersinKredisi; 
+			$i = $i + 1;
+			
+		}
+		
+		$kredi = array_sum($krediler);
+		
+		$veriler = array(
+			'dersler' => $dersler, 
+			'toplamkredi' => $kredi, 
+		);
+		
+		return $app['twig']->render('pages/tr/okulkredisihesapla.html.twig', $veriler);
+	  
+	});
+	
+}
 $app->get('{page}.html', function($page) use ($app) {
 	
 	$universal_pages = array(
