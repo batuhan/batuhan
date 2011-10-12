@@ -42,7 +42,7 @@ if($app['locale'] === 'tr'){
 			
 			$dersinKredisi = $dersNotu * $_GET['dersSaati'][$i];
 			 
-			$dersler[] = '('.$dersNotu.' * '.$_GET['dersSaati'][$i].') = '.$dersinKredisi;
+			$dersler[] = $_GET['dersAdi'][$i].': ('.$dersNotu.' * '.$_GET['dersSaati'][$i].') = '.$dersinKredisi;
 			$krediler[$i] = $dersinKredisi; 
 			$i = $i + 1;
 			
