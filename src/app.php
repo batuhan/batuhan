@@ -35,6 +35,13 @@ $app->get($app['translator']->trans('route_legal'), function() use ($app) {
   return $app['twig']->render($app['translator']->trans('route_legal').'.html.twig');
   
 });
+
+$app->get('test', function() use ($app) {
+  
+  return print_r($app['request']);
+  
+});
+
 if($app['locale'] === 'tr'){
 	$app->get('okulkredisihesapla-sonuc.html', function() use ($app) {
 		
@@ -66,9 +73,16 @@ $app->get('{page}.html', function($page) use ($app) {
 	$universal_pages = array(
 		'google324535e8ca471bb3'
 	);
+	
 	if( ! in_array($page, $universal_pages) ){
 		$page = $app['locale'].'/'.$page;
 	}
-	return $app['twig']->render('pages/'.$page.'.html.twig');
+	
+	$page = 'pages/'.$page.'.html.twig';
+	
+	$last_updated = filemtime( __DIR__.'/../views/'.$page);
+  	$data['last_updated'] = date ("F d Y H:i:s.", $last_updated);
+
+  	return $app['twig']->render($page, $data);
   
 });

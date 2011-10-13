@@ -37,7 +37,19 @@ if($_SERVER['SERVER_NAME'] === 'batuhanicoz.com.tr'){
 }
 
 $app['domain'] = $_SERVER['SERVER_NAME']; // @TODO: There should be another (good) way to get a global variable in Twig.
+/*
+$app->error(function (\Exception $e, $code) {
+    switch ($code) {
+        case 404:
+            $message = 'This page does not exist bro / Böyle bir sayfa yok kanka.';
+            break;
+        default:
+            $message = 'We are sorry, but something went terribly wrong.';
+    }
 
+    return new Response($message, $code);
+});
+*/
 $app->register(new Silex\Provider\TranslationServiceProvider(), array(
     'translation.class_path' =>  __DIR__.'/../vendor/Symfony/src', 
 	'locale' => $locale,
