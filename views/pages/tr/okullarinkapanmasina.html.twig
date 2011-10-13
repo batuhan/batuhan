@@ -7,8 +7,13 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
-	$("#kaczamankaldi").countdown({
+	$("#senesonuna").countdown({
 		date: "june 15, 2012 12:30:00",
+		htmlTemplate: "%{d} gün %{h} saat %{m} dakika ve %{s} saniye"
+	});
+	
+	$("#yariyiltatiline").countdown({
+		date: "january 22, 2012 12:30:00",
 		htmlTemplate: "%{d} gün %{h} saat %{m} dakika ve %{s} saniye"
 	});
 	
@@ -20,17 +25,18 @@ $(document).ready(function() {
     <div class="container">
 	<section id="okullarinkapanmasina">
 	  <div class="page-header">
-	    <h1>Okullar ne zaman kapanıyor? <!-- small>Yarı yıl tatili ne zaman?</small --></h1>
+	    <h1>Okullar ne zaman kapanıyor? <small>Yarı yıl tatili ne zaman?</small></h1>
 	  </div>
 
       <div class="hero-unit">
-        <h2><span id="kaczamankaldi">0</span>* <small>sonra okullar kapanıyor!</small></h2>
+        <h2><span id="yariyiltatiline">0</span>* sonra yarı yıl tatili başlıyor,</h2>
+        <h2><span id="senesonuna">0</span>* sonra yaz tatili başlıyor!</h2>
 
 		<div class="clearfix"></div>
         <p>
 		<fb:like send="true" width="450" show_faces="false"></fb:like>
 		</p>
-		<h6>*15 Haziran 2012 tarihinde saat 12:30'a ayarlıdır.</h6>
+		<h6>*Sene sonu 15 Haziran 2012, yarı yıl tatili 22 Ocak 2012 tarihinde saat 12:30'a ayarlıdır.</h6>
 
       </div>
 	</section>

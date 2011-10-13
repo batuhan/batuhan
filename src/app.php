@@ -12,6 +12,7 @@ $app->get('/', function() use ($app) {
 		. $beenalivefor->m.' minutes, ';
 	
   return $app['twig']->render('homepage.html.twig', $data);
+
 });
 
 $app->get($app['translator']->trans('route_contact'), function() use ($app) {

@@ -1,13 +1,6 @@
 {% extends "layout.html.twig" %}
 {% block title %}Lise yıl sonu kredisi hesap uygulaması - {% endblock %}
 {% block desc %}Lise yıl sonu kredisi hesap uygulaması yıl sonu kredinizi kolayca hesaplayabilirsiniz. (c) Batuhan İçöz{% endblock %}
-{% block add_to_header %}
-<style>
-.ittir {
-padding-left:20px;
-}
-</style>
-{% endblock %}
 
 {% block add_to_footer %}
 <script type="text/javascript">
@@ -17,14 +10,12 @@ $(document).ready(function() {
 	
 	var derssayisi = 2;
 	console.log(derssayisi + ' ders var');
-		
-	$('#dersekle').click(dersEkle());
-    
+		    
 	function dersEkle(){
 		console.log(derssayisi + ' ders var, ekleme öncesi');
 		derssayisi = derssayisi + 1;
 		console.log(derssayisi + ' ders var, ekleme öncesi');
-		$('.dersler:last').after('<tr class="dersler" id="ders' + derssayisi + '"><td><h5 class="span3"><span id="ders' + derssayisi + '_adi_baslik">Ders ' + derssayisi + '</span></h5></td><td><input class="span1" id="ders' + derssayisi + '_notu" name="dersNotu[]" type="text" placeholder="3" /></td><td><input class="span1" id="ders' + derssayisi + '_saati" name="dersSaati[]" type="text" placeholder="4" /></td><td><input class="span4" id="ders' + derssayisi + '_adi" name="dersAdi[]" type="text" placeholder="Ders adı" /></td></tr>');
+		$('.dersler:last').after('<tr class="dersler" id="ders' + derssayisi + '" style="display:none;"><td><h5 class="span3"><span id="ders' + derssayisi + '_adi_baslik">Ders ' + derssayisi + '</span></h5></td><td><input class="span1" id="ders' + derssayisi + '_notu" name="dersNotu[]" type="text" placeholder="3" /></td><td><input class="span1" id="ders' + derssayisi + '_saati" name="dersSaati[]" type="text" placeholder="4" /></td><td><input class="span4" id="ders' + derssayisi + '_adi" name="dersAdi[]" type="text" placeholder="Ders adı" /></td></tr>');
 		console.log('bir ders eklendi');
 		console.log(derssayisi + ' ders var, ekleme sonrası');
 		
@@ -32,9 +23,7 @@ $(document).ready(function() {
 			
 	}
 	
-	
-	$('#derscikar').click(dersCikar());
-    
+	    
 	function dersCikar(){
 
 		console.log(derssayisi + ' ders var, çıkarma öncesi');
@@ -48,7 +37,22 @@ $(document).ready(function() {
 		}
 	
 	}
-	    
+	
+	
+	$('#dersekle').click(function() {
+	
+		dersEkle();
+	
+      $('#ders' + derssayisi).fadeIn('slow', function() {
+        
+      });
+    });
+
+	$('#derscikar').click(function() {
+	
+		dersCikar();
+		
+    });
 	
 	function kontrolMekanizmasi(){
 		$('input[name*="dersAdi"]').keyup(function(dersBaslikBilgileri){
@@ -92,13 +96,15 @@ $(document).ready(function() {
 							</tr>
 
 						</table>
+						<input type="hidden" name="post" value="1" />
+						
 						<input type="hidden" name="lang" value="tr" />
 						<div class="well">
-						<a href="#" class="btn large info" id="dersekle">+ Ders Ekle</a>
-				        <a href="#" class="btn large info" id="derscikar">- Ders Çıkar</a>
+						<a href="#" class="btn info" id="dersekle">+ Ders Ekle</a>
+				        <a href="#" class="btn info" id="derscikar">- Ders Çıkar</a>
 				        
-						<input type="submit" value="Hesapla" class="btn large primary" />
-				        <input type="reset" value="Sıfırla" class="btn large" />
+						<input type="submit" value="Hesapla" class="btn primary" />
+				        <input type="reset" value="Sıfırla" class="btn" />
 				      </div>
 					</form>
 					
