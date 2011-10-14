@@ -40,26 +40,9 @@
 # enable-cors.org
 # code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
 
-#  <IfModule mod_headers.c>
-#    Header set Access-Control-Allow-Origin "*"
-#  </IfModule>
-
-
-
-# ----------------------------------------------------------------------
-# Webfont access
-# ----------------------------------------------------------------------
-
-# Allow access from all domains for webfonts.
-# Alternatively you could only whitelist your
-# subdomains like "sub.domain.com".
-
-<FilesMatch "\.(ttf|otf|eot|woff|font.css)$">
-  <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-  </IfModule>
-</FilesMatch>
-
+<IfModule mod_headers.c>
+	Header set Access-Control-Allow-Origin "*"
+</IfModule>
 
 
 # ----------------------------------------------------------------------
