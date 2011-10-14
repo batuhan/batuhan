@@ -1,3 +1,3 @@
 [submodule "web/assets"]
-path = web/assets
-url = git@github.com:batuhanicoz/batuhanicoz.github.com.git
+	path = web/assets
+	url = git://github.com/batuhanicoz/batuhanicoz-com.git
