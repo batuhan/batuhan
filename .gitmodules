@@ -1,0 +1,3 @@
+[submodule "assets"]
+path = web/assets
+url = git@github.com:batuhanicoz/batuhanicoz.github.com.git
