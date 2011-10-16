@@ -2,16 +2,7 @@
 
 $app->get('/', function() use ($app) {
 	
-	$birthday = new DateTime('1995-06-21T12:35:00+00:00');
-	$beenalivefor = $birthday->diff(new DateTime());
-
- 	$data['beenalivefor'] = $beenalivefor->y . ' years, '
-		. $beenalivefor->m.' months, '
-		. $beenalivefor->d.' days, '
- 		. $beenalivefor->h.' hours and '
-		. $beenalivefor->m.' minutes, ';
-	
-  return $app['twig']->render('homepage.html.twig', $data);
+  return $app['twig']->render('homepage.html.twig');
 
 });
 
