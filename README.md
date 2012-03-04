@@ -1,3 +1,5 @@
+#This is the old version of my site, I now use WordPress because it is easier to maintain.
+
 BatuhanIcoz.com
 =================
 
