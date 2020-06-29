@@ -10,7 +10,7 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
         />
-        
+
         <link
           href="https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic"
           rel="stylesheet"
@@ -20,29 +20,29 @@ export default function Home() {
 
       <div className="container">
         <img
-          src="/avatar-highres.jpg"
+          src="/avatar-shitquality.jpg"
           className="profile-image"
           alt="Fırat Batuhan İçöz"
         />
 
-        <h1>f. batuhan icoz</h1>
-        <p>he/him/his. from Istanbul (GMT+3) </p>
-        <h2> now</h2>
+        <h1>f. batuhan içöz</h1>
+        <p>digital product maker + software engineer from Istanbul</p>
+        <h2>currently</h2>
         <ul>
           <li>
-            senior product engineer + proud employee #1 at{" "}
-            <a href="http://www.nod.com.tr/?ref=bt.hn">Checkly</a>
+            senior product engineer + proud first employee at{" "}
+            <a href="https://www.checklyhq.com/?ref=bt.hn">Checkly</a>
           </li>
           <li>
             freelance digital product + startup consultant at{" "}
-            <a href="http://www.nod.com.tr/?ref=bt.hn">pickled.works</a>
+            <a href="http://pickled.works/?ref=bt.hn">pickled.works</a>
           </li>
         </ul>
 
-        <h2>past</h2>
+        <h2>formerly</h2>
         <ul>
           <li>
-            <strong>2014-2020</strong> founder + cto at NOD, a software focused
+            <strong>2014-2020</strong> founder + cto at a software focused
             digital product studio
           </li>
           <li>
@@ -62,14 +62,15 @@ export default function Home() {
             production studio
           </li>
           <li>
-            <strong>2014</strong> head of software development at a performance
+            <strong>2014</strong> head of software development at an award winning performance
             marketing agency
           </li>
           <li>
-            <strong>2012-2013</strong> senior full-stack web developer at an ad
-            agency
+            <strong>2010-2014</strong> freelance software developer, senior full-stack web developer at various ad agencies
           </li>
-
+          <li>
+            <strong>2009-2012</strong> co-founder at a then super popular online broadcaster
+          </li>
           <li>
             <strong>2009-2010</strong> lead developer at a startup
           </li>
@@ -77,11 +78,7 @@ export default function Home() {
             <strong>2009-2010</strong> maximazing future cringe by vlogging
           </li>
           <li>
-            <strong>2009-2012</strong> co-founder at a then super popular online
-            radio
-          </li>
-          <li>
-            <strong>2009-2014</strong> freelance software developer
+            <strong>2005-2009</strong> a period of shitty code and embarrassing forum posts
           </li>
           <li>
             <strong>2005</strong> first LOC
@@ -90,6 +87,7 @@ export default function Home() {
             <strong>1995</strong> boot
           </li>
         </ul>
+
         <p className="make-it-bold">
           <a href="mailto:batuhan@icoz.co">batuhan@icoz.co</a> |{" "}
           <a href="https://twitter.com/batuhan">Twitter</a> |{" "}
