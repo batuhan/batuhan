@@ -34,8 +34,7 @@ export default function Home() {
             <a href="https://www.checklyhq.com/?ref=bt.hn">Checkly</a>
           </li>
           <li>
-            freelance digital product + startup consultant at{" "}
-            <a href="http://pickled.works/?ref=bt.hn">pickled.works</a>
+            freelance digital product + startup consultant at large
           </li>
         </ul>
 
@@ -91,6 +90,7 @@ export default function Home() {
         <p className="make-it-bold">
           <a href="mailto:batuhan@icoz.co">batuhan@icoz.co</a> |{" "}
           <a href="https://twitter.com/batuhan">Twitter</a> |{" "}
+          <a href="https://instagram.com/batuhan">Instagram</a> |{" "}
           <a href="https://github.com/batuhan">GitHub</a> |{" "}
           <a href="https://linkedin.com/in/batuhanicoz">LinkedIn</a>
         </p>
@@ -204,10 +204,10 @@ export default function Home() {
           height: 0;
         }
         .container {
-          padding-right: 50px;
-          padding-left: 50px;
-          margin-right: auto;
-          padding-top: 50px;
+          padding-right: 5%;
+          padding-left:  5%;
+          margin-right: 5%;
+          padding-top: 5%;
           width: 750px;
         }
         .container:before,
