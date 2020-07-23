@@ -17,7 +17,7 @@ export default function Home() {
 
         <h1>merhaba.</h1>
         <p>yıllardır gün aşırı Instagram ve Twitter kullanıcı adım için mesaj ve teklifler alıyorum.</p>
-        <p>bazıları kibarca yaklaşıyor, bazıları ben kibarca cevap versem dahi reddedildiğinde küfretmeye başlıyor.</p>
+        <p>bazıları kibarca yaklaşıyor, bazıları ben kibarca cevap versem dahi reddedildiğinde küfretmeye başlıyor. bu nedenden herkesle tek tek iletişime girmektense bu sayfayı oluşturdum.</p>
         <p>çeşitli saçmalıklarla 2016'dan beri üç kez kullanıcı adımı geri almam gerekti. hepsinde hesap da gittiği için tüm paylaşımlarımı, yılların anılarını da kaybetmiş oldum.</p>
         <p>bu kullanıcı adlarının bende olma sebebi ilk kayıt olanlardan olmam. satmayı veya devretmeyi istemiyorum ve düşünmüyorum. </p>
 
