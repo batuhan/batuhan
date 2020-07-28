@@ -1,10 +1,11 @@
 # merhaba.
 
-I'm digital product maker + software engineer from Istanbul.
+* **digital product maker + software engineer**
 
-## currently
+* sr. product engineer at [checkly](https://www.checklyhq.com/?ref=bt.hn)
+* digital product + startup consultant
+* have been creating impossible to reproduce bugs since '05
+* managed, invested in and/or bankrupted multiple companies 
+* from Istanbul 🇹🇷
 
-* senior product engineer + proud first employee at{" "} [Checkly](https://www.checklyhq.com/?ref=bt.hn)
-* freelance digital product + startup consultant at large
-
-[find out more](https://batuhan.co/?ref=githubprofile) | [batuhan@icoz.co](mailto:batuhan@icoz.co) | [Twitter](https://twitter.com/batuhan) | [LinkedIn](https://linkedin.com/in/batuhanicoz)
+[find out more](https://batuhan.co/?ref=githubprofile) | [batuhan@icoz.co](mailto:batuhan@icoz.co) | [twitter](https://twitter.com/batuhan) | [linkedin](https://linkedin.com/in/batuhanicoz)
