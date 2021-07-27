@@ -2,7 +2,7 @@
 
 * **digital product maker + software engineer**
 
-* sr. product engineer at [checkly](https://www.checklyhq.com/?ref=bt.hn)
+* co-f + chief product at [Saltana](https://www.saltana.com/?ref=githubprofile)
 * digital product + startup consultant
 * have been creating impossible to reproduce bugs since '05
 * managed, invested in and/or bankrupted multiple companies 
