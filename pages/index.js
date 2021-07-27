@@ -30,8 +30,7 @@ export default function Home() {
         <h2>currently</h2>
         <ul>
           <li>
-            senior product engineer + proud first employee at{" "}
-            <a href="https://www.checklyhq.com/?ref=bt.hn">Checkly</a>
+            co-founder + head of product at <a href="https://www.saltana.com/?ref=bt.hn">Saltana</a>
           </li>
           <li>
             freelance digital product + startup consultant at large
@@ -41,7 +40,11 @@ export default function Home() {
         <h2>formerly</h2>
         <ul>
           <li>
-            <strong>2014-2020</strong> founder + cto at a software focused
+            <strong>2020</strong> senior product engineer + proud first employee at a kick-ass ac{" "}
+            <a href="https://www.checklyhq.com/?ref=bt.hn">a kick-ass active monitoring startup</a>
+          </li>
+          <li>
+            <strong>2014-2019</strong> founder + cto at a software focused
             digital product studio
           </li>
           <li>
