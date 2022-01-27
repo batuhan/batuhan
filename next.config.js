@@ -4,6 +4,7 @@ const twitchRedirectDefaults = {
 }
 
 module.exports = {
+  target: 'serverless',
   async redirects() {
     return [
       {
