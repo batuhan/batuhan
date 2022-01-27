@@ -26,14 +26,20 @@ export default function Home() {
         />
 
         <h1>f. batuhan içöz</h1>
-        <p>digital product maker + software engineer from Istanbul</p>
+        <p>digital product maker, investor & software engineer</p>
         <h2>currently</h2>
         <ul>
           <li>
             co-founder + head of product at <a href="https://www.saltana.com/?ref=bt.hn">Saltana</a>
           </li>
           <li>
+            small scale investments at <a href="https://pickled.works">pickled.works</a>
+          </li>
+          <li>
             freelance digital product + startup consultant at large
+          </li>
+          <li>
+            political live streams (in Turkish) at <a href="https://twitch.tv/susbatuhan">twitch</a>
           </li>
         </ul>
 
@@ -94,6 +100,7 @@ export default function Home() {
           <a href="mailto:batuhan@icoz.co">batuhan@icoz.co</a> |{" "}
           <a href="https://twitter.com/batuhan">Twitter</a> |{" "}
           <a href="https://instagram.com/batuhan">Instagram</a> |{" "}
+          <a href="https://twitch.tv/susbatuhan">Twitch</a> |{" "}
           <a href="https://github.com/batuhan">GitHub</a> |{" "}
           <a href="https://linkedin.com/in/batuhanicoz">LinkedIn</a>
         </p>
