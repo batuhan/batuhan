@@ -30,11 +30,15 @@ export default function Home() {
         <h2>currently</h2>
         <ul>
           <li>
-            co-founder + head of product at <a href="https://www.saltana.com/?ref=bt.hn">Saltana</a>
+            co-founder + head of product at <a href="https://www.minipagehq.com/?ref=bt.hn">Minipage</a>
           </li>
           <li>
             small scale investments at <a href="https://pickled.works">pickled.works</a>
           </li>
+        </ul>
+
+        <h2>sometimes</h2>
+        <ul>
           <li>
             freelance digital product + startup consultant at large
           </li>
@@ -42,11 +46,11 @@ export default function Home() {
             political live streams (in Turkish) at <a href="https://twitch.tv/susbatuhan">twitch</a>
           </li>
         </ul>
-
-        <h2>formerly</h2>
+  
+        <h2>before</h2>
         <ul>
           <li>
-            <strong>2020</strong> senior product engineer + proud first employee at a kick-ass ac{" "}
+            <strong>2020</strong> senior product engineer + proud first employee at 
             <a href="https://www.checklyhq.com/?ref=bt.hn">a kick-ass active monitoring startup</a>
           </li>
           <li>
