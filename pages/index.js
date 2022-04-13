@@ -50,7 +50,7 @@ export default function Home() {
         <h2>before</h2>
         <ul>
           <li>
-            <strong>2020</strong> senior product engineer + proud first employee at 
+            <strong>2020</strong> senior product engineer + proud first employee at{" "}
             <a href="https://www.checklyhq.com/?ref=bt.hn">a kick-ass active monitoring startup</a>
           </li>
           <li>
