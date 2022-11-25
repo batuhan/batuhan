@@ -93,7 +93,7 @@ export default function Home() {
             <strong>2005-2009</strong> a period of shitty code and embarrassing forum posts
           </li>
           <li>
-            <strong>2005</strong> first LOC
+            <strong>2005</strong> first line of code
           </li>
           <li>
             <strong>1995</strong> boot
@@ -102,6 +102,7 @@ export default function Home() {
 
         <p className="make-it-bold">
           <a href="mailto:batuhan@icoz.co">batuhan@icoz.co</a> |{" "}
+          <a href="https://calendly.com/batuhan">book a meeting</a> |{" "}
           <a href="https://twitter.com/batuhan">Twitter</a> |{" "}
           <a href="https://instagram.com/batuhan">Instagram</a> |{" "}
           <a href="https://twitch.tv/susbatuhan">Twitch</a> |{" "}
