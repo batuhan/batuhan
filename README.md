@@ -1,6 +1,6 @@
 # merhaba.
 
-* writing code at [Texts](https://www.textshq.com/)
+* writing code at [Texts](https://www.texts.com/)
 * helping companies build products at [pickled.works](https://pickled.works)
 * creating impossible to reproduce bugs since 2005
 * managed and/or bankrupted multiple companies 
