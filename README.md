@@ -1,6 +1,6 @@
 # merhaba.
 
-* building the best chat app on earth [Texts](https://www.texts.com/)/[Beeper](https://www.beeper.com/) at [Automattic](https://www.automattic.com/)
+* building the best chat app on earth [Beeper](https://www.beeper.com/) at [Automattic](https://www.automattic.com/)
 * creating impossible to reproduce bugs since 2005
 * managed and/or bankrupted multiple companies
 * lives in Amsterdam 🇳🇱 from 🇹🇷
